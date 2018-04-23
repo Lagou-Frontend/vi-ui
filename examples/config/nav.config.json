@@ -1,0 +1,108 @@
+
+[
+  {
+    "desc": "开发指南",
+    "children": [
+      {
+        "desc": "介绍",
+        "path": "/",
+        "name": "introduce"
+      },
+      {
+        "desc": "安装",
+        "path": "/install",
+        "name": "install"
+      }, {
+        "desc": "快速上手",
+        "path": "/quick-start",
+        "name": "quick-start"
+      }, {
+        "desc": "更新日志",
+        "path": "/change-log",
+        "name": "change-log"
+      }
+    ]
+  },
+  {
+    "desc": "组件",
+    "children": [
+      {
+        "desc": "基础组件",
+        "children": [
+          {
+            "desc": "Icon图标",
+            "path": "/icon",
+            "name": "icon"
+          }, {
+            "desc": "Button按钮",
+            "path": "/button",
+            "name": "button"
+          }
+        ]
+      }, {
+        "desc": "Form",
+        "children": [
+          {
+            "desc": "Input 输入框",
+            "path": "/input",
+            "name": "input"
+          }, {
+            "desc": "Radio 单选框",
+            "path": "/radio",
+            "name": "radio"
+          }, {
+            "desc": "Checkbox 多选框",
+            "path": "/checkbox",
+            "name": "checkbox"
+          }, {
+            "desc": "Form 表单",
+            "path": "/form",
+            "name": "form"
+          }
+        ]
+      },
+      {
+        "desc": "Notice",
+        "children": [
+          {
+            "desc": "Attention 警告",
+            "path": "/attention",
+            "name": "attention"
+          }, {
+            "desc": "Loading 加载",
+            "path": "/loading",
+            "name": "loading"
+          }, {
+            "desc": "Message 消息提示(toast)",
+            "path": "/message",
+            "name": "message"
+          }, {
+            "desc": "MessageBox 弹框(pop box)",
+            "path": "/message-box",
+            "name": "message-box"
+          }
+        ]
+      },
+      {
+        "desc": "Navigation",
+        "children": [
+          {
+            "desc": "Tabs 标签页",
+            "path": "/tabs",
+            "name": "tabs"
+          }
+        ]
+      },
+      {
+        "desc": "Others",
+        "children": [
+          {
+            "desc": "Dialog 对话框",
+            "path": "/dialog",
+            "name": "dialog"
+          }
+        ]
+      }
+    ]
+  }
+]

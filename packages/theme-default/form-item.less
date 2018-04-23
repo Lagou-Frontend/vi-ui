@@ -1,0 +1,148 @@
+@import './common/utils.less';
+@import './common/vars.less';
+
+.form-item() {
+  margin-bottom: 22px;
+  .utils-clearfix();
+  & .vi-form-item {
+    margin-bottom: 0;
+  }
+
+  & .vi-input__validateIcon {
+    display: none;
+  }
+
+  &.vi-form-item--medium {
+    .vi-form-item__label {
+      line-height: 36px;
+    }
+    .vi-form-item__content {
+      line-height: 36px;
+    }
+  }
+
+  &.vi-form-item--small {
+    .vi-form-item__label {
+      line-height: 32px;
+    }
+    .vi-form-item__content {
+      line-height: 32px;
+    }
+    &.vi-form-item {
+      margin-bottom: 18px;
+    }
+    .vi-form-item__error {
+      padding-top: 2px;
+    }
+  }
+
+  &.vi-form-item--mini {
+    .vi-form-item__label {
+      line-height: 28px;
+    }
+    .vi-form-item__content {
+      line-height: 28px;
+    }
+    &.vi-form-item {
+      margin-bottom: 18px;
+    }
+    .vi-form-item__error {
+      padding-top: 1px;
+    }
+  }
+
+  .vi-form-item__label {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    color: @--color-text-regular;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+  }
+
+  .vi-form-item__content {
+    line-height: 40px;
+    position: relative;
+    font-size: 14px;
+    .utils-clearfix();
+
+    .vi-input-group {
+      vertical-align: middle;
+    }
+  }
+
+  .vi-form-item__error {
+    color: @--color-danger;
+    font-size: 12px;
+    line-height: 1;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    &.vi-form-item--inline {
+      position: relative;
+    top: auto;
+    left: auto;
+    display: inline-block;
+    margin-left: 10px;
+    }
+  }
+
+  &.is-required {
+    .vi-form-item__label:before {
+      content: '*';
+      color: @--color-danger;
+      margin-right: 4px;
+    }
+  }
+
+  &.is-error {
+    & .vi-input__inner,
+    & .vi-textarea__inner {
+      &, &:focus {
+        border-color: @--color-danger;
+      }
+    }
+    & .vi-input-group__append,
+    & .vi-input-group__prepend {
+      & .vi-input__inner {
+        border-color: transparent;
+      }
+    }
+    .vi-input__validateIcon {
+      color: @--color-danger;
+    }
+  }
+
+  &.is-success {
+    & .vi-input__inner,
+    & .vi-textarea__inner {
+      &, &:focus {
+        border-color: @--color-success;
+      }
+    }
+    & .vi-input-group__append,
+    & .vi-input-group__prepend {
+      & .vi-input__inner {
+        border-color: transparent;
+      }
+    }
+    .vi-input__validateIcon {
+      color: @--color-success;
+    }
+  }
+
+  &.vi-form-item--feedback {
+    .vi-input__validateIcon {
+      display: inline-block;
+    }
+  }
+}
+
+
+.vi-form-item {
+  .form-item()
+}

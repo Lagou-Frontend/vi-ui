@@ -1,0 +1,132 @@
+@import './common/vars.less';
+
+.input() {
+  position: relative;
+  font-size: @--font-size-base;
+  display: inline-block;
+  width: 100%;
+
+  .vi-input__inner {
+      -webkit-appearance: none;
+      background-color: @--input-fill;
+      background-image: none;
+      border-radius: @--input-border-radius;
+      border: @--input-border;
+      box-sizing: border-box;
+      color: @--input-color;
+      display: inline-block;
+      font-size: inherit;
+      height: @--input-height;
+      line-height: @--input-height;
+      outline: none;
+      padding: 0 15px;
+      transition: @--border-transition-base;
+      width: 100%;
+  
+      &::placeholder {
+        color: @--input-placeholder-color;
+      }
+  
+      &:hover {
+        border-color: @--input-hover-border;
+      }
+  
+      &:focus {
+        outline: none;
+        border-color: @--input-focus-border;
+      }
+    
+  }
+
+  &.is-disabled {
+    .vi-input__inner {
+      background-color: @--input-disabled-fill;
+      border-color: @--input-disabled-border;
+      color: @--input-disabled-color;
+      cursor: not-allowed;
+
+      &::placeholder {
+        color: @--input-disabled-placeholder-color;
+      }
+    }
+  }
+
+  &.vi-input--medium {
+    font-size: @--input-medium-font-size;
+    .vi-input__inner {
+      height: @--input-medium-height;
+      line-height: @--input-medium-height;
+    }
+  }
+  &.vi-input--small {
+    font-size: @--input-small-font-size;
+    .vi-input__inner {
+      height: @--input-small-height;
+      line-height: @--input-small-height;
+    }
+  }
+  &.vi-input--mini {
+    font-size: @--input-mini-font-size;
+    .vi-input__inner {
+      height: @--input-mini-height;
+      line-height: @--input-mini-height;
+    }
+  }
+}
+
+.textarea() {
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  font-size: @--font-size-base;
+
+  .vi-textarea__inner {
+    display: block;
+    resize: vertical;
+    padding: 5px 15px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: inherit;
+    color: @--input-color;
+    background-color: @--input-fill;
+    background-image: none;
+    border: @--input-border;
+    border-radius: @--input-border-radius;
+    transition: @--border-transition-base;
+
+    &::placeholder {
+      color: @--input-placeholder-color;
+    }
+
+    &:hover {
+      border-color: @--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: @--input-focus-border;
+    }
+  }
+
+  &.is-disabled {
+    .vi-textarea__inner {
+      background-color: @--input-disabled-fill;
+      border-color: @--input-disabled-border;
+      color: @--input-disabled-color;
+      cursor: not-allowed;
+
+      &::placeholder {
+        color: @--input-disabled-placeholder-color;
+      }
+    }
+  }
+}
+
+
+.vi-input {
+  .input() 
+}
+.vi-textarea {
+  .textarea() 
+}
