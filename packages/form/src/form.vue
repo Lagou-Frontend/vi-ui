@@ -8,7 +8,7 @@
   </form>
 </template>
 <script>
-import objectAssign from '@/utils/merge'
+import objectAssign from '../../../src/utils/merge'
 import { resolve } from 'url';
 
 export default {

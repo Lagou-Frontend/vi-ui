@@ -7,7 +7,7 @@
 </template>
 <script>
 
-import Emitter from '@/mixins/emitter'
+import Emitter from '../../../src/mixins/emitter'
 
 export default {
   name: 'ViRadioGroup',

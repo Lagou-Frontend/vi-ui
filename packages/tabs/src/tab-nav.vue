@@ -24,8 +24,8 @@
 
 <script>
 // import TabBar from './tab-bar.vue'
-import { addResizeListener, removeResizeListener } from '@/utils/resize-event'
-import { noop } from '@/utils/util'
+import { addResizeListener, removeResizeListener } from '../../../src/utils/resize-event'
+import { noop } from '../../../src/utils/util'
 
 export default {
   name: 'TabNav',
