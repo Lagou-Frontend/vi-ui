@@ -130,3 +130,18 @@ close-on-press-escape | 是否可以通过按下 ESC 关闭 Dialog | boolean | -
 show-close | 是否显示关闭按钮 | boolean | --- | true
 before-close | 关闭前的回调，会暂停 Dialog 的关闭 | function(done)，done 用于关闭 Dialog | --- | ---
 center | 是否对头部和底部采用居中布局 | boolean | --- | false
+
+
+## Slot
+
+name |	说明
+--- | --- 
+--- | Dialog 的内容 
+title | Dialog 标题区的内容 
+footer | Dialog 按钮操作区的内容 
+
+## Events
+事件名称 | 说明 | 回调参数
+--- | --- | --- 
+close | Dialog 关闭的回调 | --- 
+open | Dialog 打开的回调 | --- 
