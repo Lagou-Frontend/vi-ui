@@ -38,6 +38,11 @@ html,
 body {
   font-size: 14px;
 }
+blockquote {
+  margin-left: 0;
+  padding-left: 10px;
+  border-left: 6px solid red;
+}
 #app {
   /* text-align: center; */
   /* color: #2c3e50; */

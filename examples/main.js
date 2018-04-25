@@ -55,6 +55,10 @@ let demoMethods = {
   },
   tabsHandleClick1 (e) {
     console.log('tabsHandleClick1')
+  },
+  beforeHandleClose1 (hide) {
+    alert('before close')
+    hide()
   }
 }
 
@@ -92,8 +96,8 @@ let demoData = {
       interests: [],
       rules: {
         name: [
-          { required: true, message: '请输入名称', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+          { required: true, message: '请输入名称', trigger: 'input' },
+          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'input' }
         ],
         gender: [
           { required: true, message: '请选择性别', trigger: 'change' }
@@ -129,6 +133,10 @@ let demoData = {
     activeName: 'second',
     activeName2: 'first',
     tabPosition: 'top'
+  },
+  dialogPage: {
+    dialogVisible1: false,
+    dialogVisible2: false
   }
 }
 
@@ -146,7 +154,3 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-
-
-
-

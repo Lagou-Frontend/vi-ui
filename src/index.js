@@ -12,6 +12,8 @@ import FormItem from '../packages/form-item/index'
 import Tabs from '../packages/tabs/index'
 import TabPane from '../packages/tab-pane/index'
 
+import Dialog from '../packages/dialog/index'
+
 const components = [
   Button,
   ButtonGroup,
@@ -23,7 +25,8 @@ const components = [
   Form,
   FormItem,
   Tabs,
-  TabPane
+  TabPane,
+  Dialog
 ]
 
 const install = function (Vue, opt = {}) {

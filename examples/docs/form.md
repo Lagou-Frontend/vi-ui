@@ -186,8 +186,11 @@
 
 
 ## 表单验证
-
+使用表单校验功能注意：
+* vi-form 组件提供model属性
+* vi-form-item 组件提供prop属性
 * **目前使用校验时，单选按钮请使用`<vi-radio-group>`包裹,多选按钮请用`<vi-checkbox-group>`包裹**，否则没触发实时校验（后续可考虑是否有必要改进）
+
 <div class="demo-block">
     <vi-form :model="formPage.form4"
       label-width="100px"
@@ -545,7 +548,7 @@ export default {
       </vi-radio-group>
     </vi-form-item>
     <vi-form-item size="large">
-      <vi-button type="primary" @click="onSubmit">立即创建</vi-button>
+      <vi-button type="primary" @click="submitForm">立即创建</vi-button>
       <vi-button>取消</vi-button>
     </vi-form-item>
   </vi-form>
@@ -565,7 +568,7 @@ export default {
       </vi-radio-group>
     </vi-form-item>
     <vi-form-item size="large">
-      <vi-button type="primary" @click="onSubmit">立即创建</vi-button>
+      <vi-button type="primary" @click="submitForm">立即创建</vi-button>
       <vi-button>取消</vi-button>
     </vi-form-item>
   </vi-form>
@@ -595,6 +598,7 @@ export default {
 --- | --- | --- | --- | ---
 model | 表单数据对象 | object | --- | ---
 rules | 表单验证规则 | object | --- | ---
+rules.prop1[0].trigger | 表单验证触发时机 | change/blur | --- | ---
 inline | 行内表单模式 | boolean | --- | false
 label-position | 表单域标签的位置 | string | right/left/top	 | right
 label-width | 表单域标签的宽度，作为 Form 直接子元素的 form-item 会继承该值 | string | --- | ---
