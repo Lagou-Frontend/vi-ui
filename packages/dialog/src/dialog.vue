@@ -6,9 +6,8 @@
       <div class="vi-dialog"
         :class="[{
           'is-fullscreen': fullscreen,
-          'vi-dialog--center': center,
-          customClass
-        }]"
+          'vi-dialog--center': center
+        }, customClass]"
         ref="dialog"
         :style="style">
         <div class="vi-dialog__header">
