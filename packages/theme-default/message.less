@@ -1,0 +1,125 @@
+@import './common/vars.less';
+
+.message() {
+  min-width: @--message-min-width;
+  box-sizing: border-box;
+  border-radius: @--border-radius-base;
+  border-width: @--border-width-base;
+  border-style: @--border-style-base;
+  border-color: @--border-color-lighter;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background-color: @--message-background-color;
+  transition: opacity 0.3s, transform .4s;
+  overflow: hidden;
+  padding: @--message-padding;
+  // display: flex;
+  // align-items: center;
+
+  &.is-center {
+    // justify-content: center;
+    text-align: center;
+  }
+
+  &.is-closeable {
+    .vi-message__content {
+      padding-right: 16px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &.vi-message--info {
+    .vi-message__content {
+      color: @--message-info-color;
+    }
+  }
+
+  &.vi-message--success {
+    background-color: @--color-success-lighter;
+    border-color: @--color-success-light;
+
+    .vi-message__content {
+      color: @--message-success-color;
+    }
+  }
+
+  &.vi-message--warning {
+    background-color: @--color-warning-lighter;
+    border-color: @--color-warning-light;
+
+    .vi-message__content {
+      color: @--message-warning-color;
+    }
+  }
+
+  &.vi-message--error {
+    background-color: @--color-danger-lighter;
+    border-color: @--color-danger-light;
+
+    .vi-message__content {
+      color: @--message-danger-color;
+    }
+  }
+
+  .vi-message__icon {
+    margin-right: 10px;
+  }
+
+  .vi-message__content {
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    &:focus {
+      outline-width: 0;
+    }
+  }
+
+  .vi-message__closeBtn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: @--message-close-color;
+    font-size: @--message-close-size;
+
+    &:focus {
+      outline-width: 0;
+    }
+    &:hover {
+      color: @--message-close-hover-color;
+    }
+  }
+
+  .vi-icon-success {
+    color: @--message-success-color;
+  }
+
+  .vi-icon-error {
+    color: @--message-danger-color;
+  }
+
+  .vi-icon-info {
+    color: @--message-info-color;
+  }
+
+  .vi-icon-warning {
+    color: @--message-warning-color;
+  }
+}
+
+
+.vi-message {
+  .message()
+}
+
+.vi-message-fade-enter,
+.vi-message-fade-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

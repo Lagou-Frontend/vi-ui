@@ -1,6 +1,9 @@
-// const hasOwnProperty = Object.prototype.hasOwnProperty;
-;
-export function noop () {}
+const hasOwnProperty = Object.prototype.hasOwnProperty
+
+export function hasOwn (obj, key) {
+  return hasOwnProperty.call(obj, key)
+}
+export function noop () { }
 
 export function getPropByPath (obj, path, strict) {
   let tempObj = obj

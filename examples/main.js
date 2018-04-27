@@ -59,6 +59,42 @@ let demoMethods = {
   beforeHandleClose1 (hide) {
     alert('before close')
     hide()
+  },
+  openMsg1 () {
+    this.$message('这是一条消息提示')
+  },
+  openMsg2 () {
+    this.$message({
+      message: '居中的文字',
+      center: true
+    })
+  },
+  openMsg3 () {
+    this.$message({
+      message: '恭喜你，这是一条成功消息',
+      type: 'success'
+    })
+  },
+  openMsg4 () {
+    this.$message({
+      message: '警告哦，这是一条警告消息',
+      type: 'warning'
+    })
+  },
+  openMsg5 () {
+    this.$message({
+      message: '这是一条消息提示',
+      type: 'info'
+    })
+  },
+  openMsg6 () {
+    this.$message.error('错了哦，这是一条错误消息')
+  },
+  openMsg7 () {
+    this.$message({
+      message: '这是一条消息提示',
+      showClose: true
+    })
   }
 }
 
@@ -137,6 +173,9 @@ let demoData = {
   dialogPage: {
     dialogVisible1: false,
     dialogVisible2: false
+  },
+  messagePage: {
+
   }
 }
 
