@@ -2,6 +2,10 @@
 
 > A Vue.js project
 
+## 使用文档
+
+[使用文档](https://zenghj.github.io/vi-ui/)
+
 ## Build Setup
 
 ``` bash
