@@ -27,7 +27,7 @@
               ? inlineMessage
               : (viForm && viForm.inlineMessage || false )
           }">
-          {{validateMessage}}
+          <i v-if="viForm && viForm.statusIcon" class="vi-icon-error"></i>&nbsp;{{validateMessage}}
         </div>
       </transition>
     </div>

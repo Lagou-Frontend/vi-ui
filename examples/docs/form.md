@@ -195,7 +195,8 @@
     <vi-form :model="formPage.form4"
       label-width="100px"
       :rules="formPage.form4.rules"
-      ref="ruleForm">
+      ref="ruleForm"
+      :status-icon="true">
       <vi-form-item label="姓名" prop="name">
         <vi-input v-model="formPage.form4.name"></vi-input>
       </vi-form-item>

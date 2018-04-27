@@ -31,6 +31,7 @@ export default {
       default: ''
     },
     inline: Boolean,
+    statusIcon: Boolean,
     showMessage: {
       type: Boolean,
       default: true
