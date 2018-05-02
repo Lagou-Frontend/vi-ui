@@ -45,5 +45,19 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   version: '0.0.1',
   install,
-  Button
+  Button,
+  ButtonGroup,
+  Input,
+  Radio,
+  RadioGroup,
+  Checkbox,
+  CheckboxGroup,
+  Form,
+  FormItem,
+  Tabs,
+  TabPane,
+  Dialog,
+
+  Message
 }
+export {Message}
