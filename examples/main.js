@@ -3,15 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
-import VVUI from '../src/index'
+import VIUI from '../src/index'
+// import VIUI from '../lib/vi-ui'
+
 import demoBlock from './components/demo-block.vue'
-// import '../lib/index.css'
+// import '../lib/theme-default/index.css'
 import '../packages/theme-default/index.less'
 import iconsInfo from '../packages/theme-default/fonts/selection.json'
 import router from './router/index'
 
+console.log('VIUI', VIUI)
 Vue.use(VueRouter)
-Vue.use(VVUI)
+Vue.use(VIUI)
 Vue.component('demo-block', demoBlock)
 
 Vue.config.productionTip = false

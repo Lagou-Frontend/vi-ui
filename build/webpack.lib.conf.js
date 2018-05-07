@@ -1,17 +1,16 @@
-// const path = require('path')
+const path = require('path')
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.base.conf')
 
-// module.exports = {
-//   entry: './src/index.js',
-//   output: {
-//     path: path.resolve(__dirname, './lib/js'),
-//     filename: '[name].js'
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /.vue/
-//       }
-//     ]
-//   }
+module.exports = merge(baseWebpackConfig, {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, '../lib/'),
+    filename: 'vi-ui.js',
+    library: "VIUI",
+    libraryTarget: "umd"
+  },
+  target: 'web'
+})
 
-// }
+
