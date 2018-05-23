@@ -1,6 +1,9 @@
 const path = require('path')
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
+const config = require('../config')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = merge(baseWebpackConfig, {
   entry: './src/index.js',
@@ -18,7 +21,22 @@ module.exports = merge(baseWebpackConfig, {
       commonjs2: 'vue',
       amd: 'vue'
     }
-  }
+  },
+  devtool: config.build.productionSourceMap ? config.build.devtool : false,
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify('production')
+    }),
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        compress: {
+          warnings: false
+        }
+      },
+      sourceMap: config.build.productionSourceMap,
+      parallel: true
+    }),
+  ]
 })
 
 
